@@ -1,0 +1,6 @@
+plugins:
+  - jekyll-scholar
+
+exclude:
+  - README.md
+  - LICENSE

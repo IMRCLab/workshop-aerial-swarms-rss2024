@@ -1,0 +1,19 @@
+organizers:
+  - name: Kimberly McGuire
+    affiliation: Crazyswarm2 / Bitcraze A.B.
+    image: knmcguire.jpg
+  - name: Wolfgang Hönig
+    affiliation: Crazyswarm2 / TU Berlin
+    image: wolfgang_hoenig.jpg
+  - name: Miguel Fernandez Cortizas
+    affiliation: Aerostack2 / UPM-CSIC
+    image: miguel.jpg
+  - name: Lorenzo Pichierri
+    affiliation: CrazyChoir / University of Bologna
+    image: lorenzo.png
+  - name: Andrea Testa
+    affiliation: CrazyChoir / University of Bologna
+    image: andrea_testa.jpg
+  - name: Giuseppe Notarstefano
+    affiliation: CrazyChoir / University of Bologna
+    image: giuseppe_notarstefano.jpg

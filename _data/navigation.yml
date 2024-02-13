@@ -1,0 +1,33 @@
+- name: About
+  link: /
+  icon: fa-solid fa-info
+# - name: Important Dates
+#   link: "#dates"
+#   icon: fa-solid fa-calendar-days
+# - name: Call for papers
+#   link: "#CFP"
+#   icon: fa-solid fa-bullhorn
+- name: Schedule
+  link: "#schedule"
+  icon: fa-solid fa-calendar-days
+- name: Invited speakers
+  link: "#speakers"
+  icon: fa-solid fa-microphone
+# - name: Papers
+#   link: "#papers"
+#   icon: fa-solid fa-book
+# - name: Simulators
+#   link: "#sims"
+#   icon: fa-solid fa-laptop-code
+# - name: Participants
+  # link: "#plan-participants"
+  # icon: fa-solid fa-comments
+- name: Team
+  link: "#team"
+  icon: fa-solid fa-people-group
+# - name: Support
+#   link: "#support"
+#   icon: fa-solid fa-quote-left
+# - name: Endorsement
+#   link: "#endorsement"
+#   icon: fa-solid fa-ad

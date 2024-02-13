@@ -1,0 +1,10 @@
+- name: Martin Saska
+  affiliation: Czech Technical University in Prague
+  image: martin_saska.jpg
+- name: Gábor Vásárhelyi
+  affiliation: CollMot Robotics Ltd. & MTA-ELTE Statistical and Biological Physics Research Group
+  image: vasarhelyigabor.jpg
+  talk: Skybrush - an open-core ecosystem for drone shows and large-scale aerial swarming missions
+- name: Sabine Hauert
+  affiliation: University of Bristol
+  image: sabine_hauert.jpg
