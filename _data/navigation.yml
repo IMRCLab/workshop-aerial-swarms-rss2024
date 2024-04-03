@@ -13,6 +13,9 @@
 - name: Invited speakers
   link: "#speakers"
   icon: fa-solid fa-microphone
+- name: Tutorials
+  link: "#tutorials"
+  icon: fa-solid fa-chalkboard-teacher
 # - name: Papers
 #   link: "#papers"
 #   icon: fa-solid fa-book
