@@ -1,0 +1,784 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aerial Swarm Tools and Applications</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/academicons.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.solid.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.brands.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+          // Get "navbar-burger" element
+          const $myNavbarBurger = document.querySelector('.navbar-burger');
+          const $myNavbar = document.querySelector('.navbar-menu');
+  
+          // do not expand menu if JS is available
+          $myNavbarBurger.classList.remove('is-active');
+          $myNavbar.classList.remove('is-active');
+  
+          $myNavbarBurger.addEventListener('click', () => {
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $myNavbarBurger.classList.toggle('is-active');
+            $myNavbar.classList.toggle('is-active');
+          });
+  
+          // Get all "navbar-item" elements
+          const $navbarItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-item'), 0);
+          if ($navbarItems.length > 0) {
+  
+            // Add a click event on each of them
+            $navbarItems.forEach( el => {
+              el.addEventListener('click', () => {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $myNavbarBurger.classList.remove('is-active');
+                $myNavbar.classList.remove('is-active');
+              });
+            });
+          }
+  
+        });
+      </script>
+
+  </head>
+  <body>
+      <!-- Navigation bar -->
+  <nav class="navbar is-dark" id="home">
+    <div class="navbar-brand">
+      <div class="navbar-burger burger is-active" data-target="myNavbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="myNavbar" class="navbar-menu is-active">
+      <div class="navbar-end">
+        
+        <a class="navbar-item  is-active " href="/">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-info"></i>
+          </span>
+          
+          <span>About </span>
+        </a>
+        
+        <a class="navbar-item " href="#schedule">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-calendar-days"></i>
+          </span>
+          
+          <span>Schedule </span>
+        </a>
+        
+        <a class="navbar-item " href="#speakers">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-microphone"></i>
+          </span>
+          
+          <span>Invited speakers </span>
+        </a>
+        
+        <a class="navbar-item " href="#tutorials">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-chalkboard-teacher"></i>
+          </span>
+          
+          <span>Tutorials </span>
+        </a>
+        
+        <a class="navbar-item " href="#team">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-people-group"></i>
+          </span>
+          
+          <span>Team </span>
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <div class="content">
+        <section class="section" id="about">
+    <div class="section-heading">
+        <h1 class="title is-1">Aerial Swarm Tools and Applications</h1>
+        <h2 class="subtitle is-2">Half-Day Tutorial and Workshop at RSS 2024</h2>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half is-4-desktop">
+        <div class="content">
+          <h2 class="subtitle is-6">Objective</h2>
+          <p>
+          This workshop provides tutorials as well as a platform for exchange to manage teams of aerial robots.
+          The first part contains tutorials for the major aerial swarm tools, namely CrazyChoir, Aerostack2, and Crazyswarm2, which are all based on ROS 2. These are meant to help researchers who are looking for aerial swarm validation in simulation and/or with physical robots to understand the capabilities and the first steps with these tools. At the same time, more experienced users or swarm tool developers will gain insights about tools.
+          The second part is focused on real-world applications for aerial swarms, with invited talks from academia and industry, poster session for contributed papers, as well as a forum to discuss ongoing challenges that arise with particular focus on the current tools for aerial swarms.
+          </p>
+        </div>
+      </div>
+
+      <div class="column is-half is-4-desktop">
+
+        <div class="content paper">
+
+          <!--
+          <h2 class="subtitle is-6">News</h2>
+
+          <ul>
+            <li>
+              <span class="title">Objectives, Topics Covered, Important Dates, Call for Papers now available</span>
+              <span class="note">20/01/2023</span>
+            </li>
+            <li>
+              <span class="title">Workshop <a href="https://www.icra2023.org/programme/workshops-tutorials">accepted to ICRA'23</a>, taking place on June 2nd, 2023</span>
+              <span class="note">21/12/2022</span>
+            </li>
+            <li>
+              <span class="title">Initial Webpage.</span>
+              <span class="note">23/09/2022</span>
+            </li>
+          </ul>
+          -->
+
+          <h2 class="subtitle is-6">Important Dates</h2>
+
+          <ul>
+            <!-- <li>
+              <s><span class="title">Extended abstract submission deadline: March 20, 2023 <p style="color:red;display:inline">April 3, 2023 23:59 (Pacific Time).</p></s>
+              </span>
+            </li>
+            <li>
+              <s>Notification to authors: April 10, 2023 (Pacific Time)</s>
+            </li>
+            <li>
+              <s>Camera-ready paper: May 5, 2023 (Pacific Time)</s>
+            </li> -->
+            <li>
+              Workshop day: July 19th, 2024 (14:00 - 18:00)
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- <p class="buttons">
+          <a href="mailto:rs4uavs@googlegroups.com" class="button is-dark">
+            <span class="icon">
+              <i class="fas fa-at"></i>
+            </span>
+            <span>E-Mail</span>
+          </a>
+        </p> -->
+
+        <!-- <p class="buttons">
+          <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c" class="button is-dark">
+            <span class="icon">
+              <i class="fas fa-video"></i>
+            </span>
+            <span>Recorded Workshop</span>
+          </a>
+        </p>
+
+        <p class="buttons">
+          <a href="https://arxiv.org/abs/2311.02296" class="button is-dark">
+            <span class="icon">
+              <i class="fa-solid fa-book"></i>
+            </span>
+            <span>Survey Paper</span>
+          </a>
+        </p> -->
+
+        <!--
+        <a href="https://easychair.org/conferences/?conf=rs4uavs" class="button is-dark">
+          <span class="icon">
+            <i class="fas fa-file-export"></i>
+          </span>
+          <span>Submission</span>
+        </a>
+      -->
+
+        <!--
+        <div class="content paper">
+          <h2 class="subtitle is-6">Questions</h2>
+            If you have any questions please <a href="mailto: rs4uavs@googlegroups.com">contact us</a>.
+        </div>
+        -->
+
+      </div>
+    </div>
+</section>
+
+<!--
+<section class="section" id="dates">
+  <div class="section-heading">
+      <h2 class="title is-2">Important Dates</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>
+          <span class="title">Extended abstract submission deadline: <p style="color:red;display:inline">March 20, 2023.</p>
+          </span>
+        </li>
+        <li>
+          Notification to authors: April 10, 2023
+        </li>
+        <li>
+          Camera-ready paper: April 17, 2023
+        </li>
+        <li>
+          <span class="title"<b>Workshop day: June 2, 2023. Last day of ICRA'23. Half-day workshop.</b></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- <section class="section" id="CFP">
+  <div class="section-heading">
+      <h2 class="title is-2">Call for Papers</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>We invite the submission of extended abstracts in line with the workshop's objectives with a maximum of 4 pages in the ICRA format,
+          encouraging and prioritizing submissions of new ideas.
+          Authors of the accepted papers will be invited to present their work during the poster session.</li>
+        <li>Every paper will be reviewed by at least two peers. The selection of accepted papers will be done by the organizing committee, based on
+          the reviews.</li>
+
+        <li><i>The deadline for submission has been extended by two weeks to April 3rd. Check out <a href="#about">the important deadlines</a></i></li>
+      </ul>
+      <center><h3><a href="https://easychair.org/conferences/?conf=rs4uavs">Submission website (EasyChair)</a></h3></center>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Topics Covered</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        Participants are encouraged to submit their recent work on simulations of aerial robots involving, but not limited to, the following aspects.
+        <br></br>
+        <li> Application-specific challenges for UAV simulation: mapping, below-canopy navigation, smart agriculture, racing, etc.</li>
+        <li>Aerial physical interaction simulation: actuated, under-actuated and passive mechanisms, aerial grasping,  human-robot interaction, etc.</li>
+        <li>Simulation/Modeling of Aerodynamic effects</li>
+        <li>Case study of a researcher or group’s technical work in the context of Robotic Simulators for Aerial Robots and how their work fits into the broader discussion provided by the Workshop topics</li>
+        <li>Control methods and benchmarks (simulation vs reality), parameters and model tuning,, robustness in edge conditions</li>
+        <li>Digital twins, operator instruction, training and operation support, transfer from simulation to reality (Sim-to-Real)</li>
+        <li>Data-driven methods</li>
+        <li>Drone technology, with particular emphasis on the importance of simulation before deployment</li>
+        <li>Hybrid simulation and hardware-in-the-loop simulation techniques</li>
+        <li>Mission and motion planning</li>
+        <li>Manipulation, path planning, navigation in dynamic and cluttered environments</li>
+        <li>Methods supporting fast simulation and real-time simulation solutions</li>
+        <li>Simulation of Multi-agent systems: cooperative manipulation, formation, communication handling, swarms, etc.,</li>
+        <li>Multi-domain simulations</li>
+        <li>Robotic toolboxes</li>
+        <li>Verification and validation</li>
+        <li>Robot behavior adaptation and personalization</li>
+        <li>State estimation, localization, mapping, perception</li>
+      </ul>
+    </div>
+  </div>
+</section> -->
+
+<section class="section" id="schedule">
+  <div class="section-heading">
+      <h2 class="title is-3">Schedule</h2>
+  </div>
+    
+  <div class="columns is-centered">
+    <div class="content paper">
+        This schedule is preliminary and may be subject to change.
+
+      <ul>
+        <li>13:50 - Introduction workshop </li>
+        <li>14:00 - Sabine Hauert </li>
+        <li>14:30 - Gábor Vásárhelyi </li>
+        <li>15:00 - Aerostack2 tutorial </li>
+        <li>15:30 - Coffee break </li>
+        <li>16:00 - Crazyswarm2 Tutorial </li>
+        <li>16:30 - Crazychoir Tutorial </li>
+        <li>17:00 - Angela Schoelig </li>
+        <li>17:30 - Martin Saska </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>
+          13:50 - 14:00: Introduction and overview
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=475s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+        
+      </ul>
+      <b>Session 1: Multi-robot simulation for learning and Interacting</b>
+      <ul>
+        <li>
+          14:00 Tomáš Báča - Abstractions and Simulations as the Backbone of Reproducible Research
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=1114s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+        <li>
+          14:30 Angela Schoellig - Safe-control-gym and gym-pybullet-drones: Simulation and benchmarking tools for safe learning-based control and reinforcement learning
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=3166s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+      </ul>
+      <b>Poster Session + Coffee break</b>
+      <ul>
+        <li>15:00 - 16:00 Poster session</li>
+        <li>15:30 - 16:00 Refreshments</li>
+      </ul>
+      <b>Session 2: Software-in-the-loop and Realistic vision-based simulation</b>
+      <ul>
+        <li>
+          16:00 Jaeyoung Lim - Simulating Workflows for Aerial Robots with Software-In-The-Loop
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=5674s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+        </li>
+        <li>
+          16:30 Davide Scaramuzza and Leonard Bauersfeld - Vision based Agile Flight, from simulation to reality
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=7416s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+      </ul>
+      <b>Session 3: Breakout & Discussion</b>
+      <ul>
+        <li>17:00 Breakout sessions</li>
+        <li>17:15 Presentation session + Open discussion</li>
+        <li>17:45 Closing Remarks</li>
+      </ul>
+    </div>
+  </div> -->
+
+  <div class="section-heading" id="speakers">
+    <h2 class="title is-3">Invited Speakers</h2>
+  </div>
+
+  <!--div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>TBD</li>
+      </ul>
+    </div>
+  </div-->
+
+  <div class="container">
+    <div class="team tile is-ancestor is-flex-wrap">
+        
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/schoellig-headshot.jpg" alt="Angela Schoellig">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Angela Schoellig
+        </p>
+        <p class="venue">
+          Technical University Munich
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/martin_saska.jpg" alt="Martin Saska">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Martin Saska
+        </p>
+        <p class="venue">
+          Czech Technical University in Prague
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Onboard relative localization for agile aerial swarming in the wild"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/sabine_hauert.jpg" alt="Sabine Hauert">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Sabine Hauert
+        </p>
+        <p class="venue">
+          University of Bristol
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Trustworthy swarms for largescale environmental monitoring"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/vasarhelyigabor.jpg" alt="Gábor Vásárhelyi">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Gábor Vásárhelyi
+        </p>
+        <p class="venue">
+          CollMot Robotics Ltd. & Department of Biological Physics, Eötvös University, Budapest
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Skybrush - an open-core ecosystem for drone shows and large-scale aerial swarming missions"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- <div class="section-heading" id="papers">
+    <h2 class="title is-3">Contributed Papers</h2>
+  </div>
+
+  <div class="container">
+    <ul class="paper">
+
+        
+
+    </ul>
+  </div> -->
+
+  <!-- <div class="section-heading">
+    <h2 class="title is-3">Plans to encourage interaction among participants</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      A set of actions are planned to solicit broad and active participation in the workshop, including:
+      <ul>
+        <li>Discussion poster of contributed abstracts</li>
+        <li>Creation of online pools among both in person and remote participants to identify top discussions themes during round tables and breaks</li>
+        <li>Breakout sessions and a round table (i.e., presentation session followed by an open discussion) with the speakers and the participants</li>
+      </ul>
+    </div>
+  </div> -->
+
+</section>
+
+<section class="section" id="tutorials">
+  <div class="section-heading">
+    <h2 class="title is-2">Tutorials</h2>
+  </div>
+
+
+  <div class="section-heading">
+    <h3 class="title is-3">Aerostack2</h3>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-8-desktop">
+      <a href=https://github.com/aerostack2/aerostack2>Aerostack2</a> is a framework built on ROS 2, offering a
+      versatile and platform-independent environment for developing autonomous aerial robotics systems.
+      Its modular software architecture and multi-robot orientation enable the integration of diverse capabilities for
+      autonomous operation.
+      Key contributions include a logical mission specification level, component and sub-system reuse, and the
+      development of complete control architectures.
+      Aerostack2 has been extensively tested in simulation and real flights with heterogeneous swarms.
+      It is open source and community-oriented, fostering accessibility for autonomous drone developers.
+    </div>
+  </div>
+
+
+    <div class="section-heading">
+      <h3 class="title is-3">Crazyswarm2</h3>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8-desktop">
+        <a href="https://imrclab.github.io/crazyswarm2/">Crazyswarm2</a>, built on ROS 2, controls Bitcraze Crazyflie
+        drones.
+        It continues the legacy of <a href="https://crazyswarm.readthedocs.io/"> Crazyswarm </a> (based on ROS 1) and
+        offers improved connectivity to external ROS2 packages.
+        With support for multiple positioning systems, it has a focus on precision swarm path-planning and execution.
+        Additionally, it supports multiple backends and provides Python bindings for hybrid software in the loop, such
+        that the step to the real-world is as small as possible.
+        Notably, Crazyswarm2 also includes swarm monitoring tools for managing and observing drone swarms.'
+      </div>
+    </div>
+
+
+    <div class="section-heading">
+      <h3 class="title is-3">Crazychoir</h3>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8-desktop">
+        <a href=https://github.com/OPT4SMART/crazychoir>CrazyChoir </a>is a Python framework based on ROS 2 that allows
+        users to run experiments on swarms of Crazyflie nano-quadrotors, both in a virtual scenario, e.g., with Webots,
+        and in a real one, including the support for MoCap Systems as, e.g., Vicon.
+        CrazyChoir is a follow-up of <a href=https://github.com/OPT4SMART/ChoiRbot>ChoiRbot</a>, a multi-robot ROS 2
+        toolbox, and provides features to develop and test distributed control and optimization tasks as, e.g., vehicle
+        routing, formation control, for teams of Crazyflies.
+        Key feature of the toolbox includes local communication among the nano-drones, optimization routines (via <a
+          href=https://github.com/OPT4SMART/disropt>Disropt</a> toolbox) and other single and multi-robot
+        functionalities.
+      </div>
+    </div>
+
+</section>
+
+
+<section class="section" id="team">
+  <div class="section-heading">
+      <h2 class="title is-2">Team</h2>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Organizing Committee</h2>
+  </div>
+
+  <div class="container">
+      <div class="team tile is-ancestor is-flex-wrap">
+          
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/knmcguire.jpg" alt="Kimberly McGuire">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Kimberly McGuire
+        </p>
+        <p class="venue">
+          Crazyswarm2 / Bitcraze A.B.
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/wolfgang_hoenig.jpg" alt="Wolfgang Hönig">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Wolfgang Hönig
+        </p>
+        <p class="venue">
+          Crazyswarm2 / TU Berlin
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/miguel.jpg" alt="Miguel Fernandez Cortizas">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Miguel Fernandez Cortizas
+        </p>
+        <p class="venue">
+          Aerostack2 / Polytechnic University of Madrid (UPM)
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/lorenzo.jpg" alt="Lorenzo Pichierri">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Lorenzo Pichierri
+        </p>
+        <p class="venue">
+          CrazyChoir / University of Bologna
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/andrea_testa.jpg" alt="Andrea Testa">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Andrea Testa
+        </p>
+        <p class="venue">
+          CrazyChoir / University of Bologna
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/giuseppe_notarstefano.jpg" alt="Giuseppe Notarstefano">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Giuseppe Notarstefano
+        </p>
+        <p class="venue">
+          CrazyChoir / University of Bologna
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+      </div>
+  </div>
+
+</section>
+
+    </div>
+  </body>
+</html>
