@@ -19,6 +19,11 @@
            <b>Talk:</b> "{{ member.talk | newline_to_br}}"
         </p>
         {% endif %}
+        {% if member.tutorial %}
+        <p class="talk">
+           <b>Tutorial:</b> "{{ member.tutorial | newline_to_br}}"
+        </p>
+        {% endif %}
       </div>
       <footer class="card-footer">
         {% if member.email %}
